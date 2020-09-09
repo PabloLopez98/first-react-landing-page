@@ -1,0 +1,36 @@
+.navbar-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .brand-container{
+        div{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .Icon{
+                margin-left: 50px;
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                color: gold;
+            }
+            span{
+                color: white;
+            }
+        }
+    }
+    .burger-container{
+      grid-column: 4/5;
+      div{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .Icon{
+            color: white;
+            width: 30px;
+            height: 30px;
+        }
+      }
+    }
+}
+

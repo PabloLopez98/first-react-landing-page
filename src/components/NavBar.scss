@@ -1,0 +1,68 @@
+.navbar-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .brand-container{
+        div{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .Icon{
+                margin-left: 50px;
+                margin-right: 10px;
+                height: 30px;
+                width: 30px;
+                color: gold;
+            }
+            span{
+                color: white;
+            }
+        }
+    }
+    .menu-container{
+        ul {
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            li{
+                color: white;
+                &:hover{
+                    transition: .2s ease-in-out;
+                    color: goldenrod;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .buttons-container{
+        div{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                margin-right: 20px;
+                color: white;
+                &:hover{
+                    transition: .2s ease-in-out;
+                    color: goldenrod;
+                    cursor: pointer;
+                }
+            }
+            div{
+                &:hover{
+                    transition: .2s ease-in-out;
+                    background: white;
+                    cursor: pointer;
+                }
+                background: lightblue;
+                height:30px;
+                span{
+                    margin: 0 17px;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,14 @@
+$themeColor: #0d0c22;
+html, body, #root, .app-container{
+    background: $themeColor;
+    height: 100%;
+    header{
+        height: 15%;
+    }
+    section{
+        height: 75%;
+    }
+    footer{
+        height: 10%;
+    }
+}

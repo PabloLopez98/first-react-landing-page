@@ -1,0 +1,99 @@
+.content-container-wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+.content-container{
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    color: white;
+    .big-text-container{
+        span{
+            font-size: 4rem;
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    }
+    .small-text-container{
+        span{
+            line-height: 1.3;
+        }
+    }
+    .buttons-container{
+        div{
+            display: flex;
+            margin-right: 20px;
+            align-items: center;
+            text-align: center;
+            div:nth-child(1){
+                &:hover{
+                    cursor: pointer;
+                    transition: .5s ease-in-out;
+                    background: white;
+                }
+                background: lightblue;
+                color: black;
+                height:40px;
+                span{
+                    margin: 0 30px;
+                }
+            }
+            div:nth-child(2){
+                &:hover{
+                    cursor: pointer;
+                    transition: .5s ease-in-out;
+                    background: red;
+                }
+                box-sizing: border-box;
+                border: white 1px solid;
+                height:40px;
+                span{
+                    margin: 0 30px;
+                }
+            }
+        }
+    }
+    .last-button-container{
+        display: flex;
+        div{
+            &:hover{
+                cursor: pointer;
+                transition: .5s ease-in-out;
+                background: goldenrod;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: white 1px solid;
+            border-radius: 50px;
+            height:40px;
+            span{
+                margin: 0 30px;
+            }
+        }
+    }
+}
+.hero-img{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .hero-img{
+        visibility: hidden;
+    }
+    .content-container{
+        //display: grid;
+        //grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr;
+    }
+}
+}

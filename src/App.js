@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import NavBarMobile from './components/NavBarMobile';
+import Content from './components/Content';
+import Brands from './components/Brands';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 600) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  })
+
+  if (!isMobile) {
+    return (
+      <div className="app-container">
+        <header>
+          <NavBar />
+        </header>
+        <section>
+          <Content />
+        </section>
+        <footer>
+          <Brands />
+        </footer>
+      </div>
+    );
+  } else {
+    return (
+      <div className="app-container">
+        <header>
+          <NavBarMobile />
+        </header>
+        <section>
+          <Content />
+        </section>
+        <footer>
+          <Brands />
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default App;
